@@ -19,3 +19,25 @@ GET         /account/sign-out                            controllers.auth.AuthCo
 GET         /account/signed-out                          controllers.auth.SignedOutController.onPageLoad()
 
 GET         /unauthorised                                controllers.UnauthorisedController.onPageLoad()
+
+GET        /postcode                        controllers.PostcodeController.onPageLoad(mode: Mode = NormalMode)
+POST       /postcode                        controllers.PostcodeController.onSubmit(mode: Mode = NormalMode)
+GET        /changePostcode                  controllers.PostcodeController.onPageLoad(mode: Mode = CheckMode)
+POST       /changePostcode                  controllers.PostcodeController.onSubmit(mode: Mode = CheckMode)
+
+GET        /reportSales                        controllers.ReportSalesController.onPageLoad(mode: Mode = NormalMode)
+POST       /reportSales                        controllers.ReportSalesController.onSubmit(mode: Mode = NormalMode)
+GET        /changeReportSales                  controllers.ReportSalesController.onPageLoad(mode: Mode = CheckMode)
+POST       /changeReportSales                  controllers.ReportSalesController.onSubmit(mode: Mode = CheckMode)
+
+GET        /startDate                  controllers.StartDateController.onPageLoad(mode: Mode = NormalMode)
+POST       /startDate                  controllers.StartDateController.onSubmit(mode: Mode = NormalMode)
+GET        /changeStartDate                        controllers.StartDateController.onPageLoad(mode: Mode = CheckMode)
+POST       /changeStartDate                        controllers.StartDateController.onSubmit(mode: Mode = CheckMode)
+
+GET        /endDate                  controllers.EndDateController.onPageLoad(mode: Mode = NormalMode)
+POST       /endDate                  controllers.EndDateController.onSubmit(mode: Mode = NormalMode)
+GET        /changeEndDate                        controllers.EndDateController.onPageLoad(mode: Mode = CheckMode)
+POST       /changeEndDate                        controllers.EndDateController.onSubmit(mode: Mode = CheckMode)
+
+GET        /carbonResults                       controllers.CarbonResultsController.onPageLoad()

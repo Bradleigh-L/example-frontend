@@ -47,3 +47,39 @@ signedOut.guidance = We did not save your answers.
 
 unauthorised.title = You can’t access this service with this account
 unauthorised.heading = You can’t access this service with this account
+
+postcode.title = postcode
+postcode.heading = postcode
+postcode.checkYourAnswersLabel = postcode
+postcode.error.required = Enter postcode
+postcode.error.length = Postcode must be 10 characters or less
+postcode.change.hidden = Postcode
+
+reportSales.title = reportSales
+reportSales.heading = reportSales
+reportSales.checkYourAnswersLabel = reportSales
+reportSales.error.required = Select yes if reportSales
+reportSales.change.hidden = ReportSales
+
+startDate.title = StartDate
+startDate.heading = StartDate
+startDate.hint = For example, 12 11 2007.
+startDate.checkYourAnswersLabel = StartDate
+startDate.error.required.all = Enter the startDate
+startDate.error.required.two = The startDate must include {0} and {1}
+startDate.error.required = The startDate must include {0}
+startDate.error.invalid = Enter a real StartDate
+startDate.change.hidden = StartDate
+
+endDate.title = EndDate
+endDate.heading = EndDate
+endDate.hint = For example, 12 11 2007.
+endDate.checkYourAnswersLabel = EndDate
+endDate.error.required.all = Enter the endDate
+endDate.error.required.two = The endDate must include {0} and {1}
+endDate.error.required = The endDate must include {0}
+endDate.error.invalid = Enter a real EndDate
+endDate.change.hidden = EndDate
+
+carbonResults.title = carbonResults
+carbonResults.heading = carbonResults

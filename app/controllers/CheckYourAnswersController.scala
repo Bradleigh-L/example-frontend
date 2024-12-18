@@ -21,8 +21,10 @@ import controllers.actions.{DataRequiredAction, DataRetrievalAction, IdentifierA
 import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.mvc.{Action, AnyContent, MessagesControllerComponents}
 import uk.gov.hmrc.play.bootstrap.frontend.controller.FrontendBaseController
+import viewmodels.checkAnswers.{EndDateSummary, PostcodeSummary, StartDateSummary}
 import viewmodels.govuk.summarylist._
 import views.html.CheckYourAnswersView
+
 
 class CheckYourAnswersController @Inject()(
                                             override val messagesApi: MessagesApi,
@@ -36,10 +38,19 @@ class CheckYourAnswersController @Inject()(
   def onPageLoad(): Action[AnyContent] = (identify andThen getData andThen requireData) {
     implicit request =>
 
-      val list = SummaryListViewModel(
-        rows = Seq.empty
-      )
+      val userAnswers = request.userAnswers
 
-      Ok(view(list))
+      val otherLiabilitiesList = SummaryListViewModel(
+        rows = Seq(
+          PostcodeSummary.row(userAnswers),
+          StartDateSummary.row(userAnswers),
+          EndDateSummary.row(userAnswers)
+
+        ).flatten
+      )
+      Ok(view(otherLiabilitiesList))
+
   }
+
+
 }
